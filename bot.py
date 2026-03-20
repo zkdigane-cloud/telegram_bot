@@ -7,14 +7,8 @@ from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
 # 🌐 KEEP ALIVE (24hr)
-from flask import Flask
 from threading import Thread
 
-app_web = Flask('')
-
-@app_web.route('/')
-def home():
-    return "Bot is running ✅"
 
 def run_web():
     port = int(os.environ.get("PORT", 8080))
